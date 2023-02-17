@@ -1,5 +1,5 @@
 object Build {
-    const val androidGradlePluginVersion = "7.3.1"
+    const val androidGradlePluginVersion = "7.4.1"
     const val androidGradlePlugin = "com.android.application"
     const val libraryGradlePlugin = "com.android.library"
 

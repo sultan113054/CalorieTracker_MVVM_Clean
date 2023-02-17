@@ -11,31 +11,22 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.application.calorietracker.ui.theme.CaloryTrackerTheme
+import com.application.onboarding_presentation.welcome.WelcomeScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             CaloryTrackerTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(fraction = 1.0f),
-                    color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                }
+                WelcomeScreen()
             }
         }
     }
 }
+
 
 @Composable
 fun Greeting(name: String) {
     Text(text = "Hello $name!")
 }
 
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    CaloryTrackerTheme {
-        Greeting("Android")
-    }
-}

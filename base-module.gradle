@@ -4,7 +4,7 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-parcelize'
 
 android {
-    namespace = ProjectConfig.appId
+    namespace ProjectConfig.appId
     compileSdk ProjectConfig.compileSdk
 
     defaultConfig {
@@ -23,7 +23,6 @@ android {
         }
     }
     compileOptions {
-        coreLibraryDesugaringEnabled true
 
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -36,7 +35,6 @@ android {
 dependencies {
     kapt Hilt.hiltCompiler
     implementation Hilt.hiltAndroidVersion
-
     testImplementation Testing.junit4
     testImplementation Testing.junitAndroidExt
     testImplementation Testing.truth
