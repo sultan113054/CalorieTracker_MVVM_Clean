@@ -1,4 +1,4 @@
-package com.application.calorietracker.ui.theme
+package com.application.calorytracker.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

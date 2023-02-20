@@ -1,4 +1,4 @@
-package com.application.calorietracker
+package com.application.calorytracker
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -6,9 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.application.calorietracker.ui.theme.CaloricTrackerTheme
+import com.application.calorytracker.ui.theme.CaloricTrackerTheme
 import com.application.core.navigation.Route
-import com.application.navigation.navigate
+import com.application.calorytracker.navigation.navigate
 import com.application.onboarding_presentation.welcome.WelcomeScreen
 
 class MainActivity : ComponentActivity() {

@@ -1,4 +1,4 @@
-package com.application.navigation
+package com.application.calorytracker.navigation
 
 import androidx.navigation.NavController
 import com.application.core.util.UiEvent
