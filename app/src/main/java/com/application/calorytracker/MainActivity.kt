@@ -14,8 +14,10 @@ import androidx.navigation.compose.rememberNavController
 import com.application.calorytracker.navigation.navigate
 import com.application.calorytracker.ui.theme.CaloricTrackerTheme
 import com.application.core.navigation.Route
+import com.application.onboarding_presentation.activity.ActivityScreen
 import com.application.onboarding_presentation.age.AgeScreen
 import com.application.onboarding_presentation.gender.GenderScreen
+import com.application.onboarding_presentation.goal.GoalScreen
 import com.application.onboarding_presentation.height.HeightScreen
 import com.application.onboarding_presentation.weight.WeightScreen
 import com.application.onboarding_presentation.welcome.WelcomeScreen
@@ -67,10 +69,10 @@ class MainActivity : ComponentActivity() {
 
                         }
                         composable(Route.ACTIVITY) {
-
+                            ActivityScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.GOAL) {
-
+                            GoalScreen(onNavigate = navController::navigate)
                         }
 
                         composable(Route.TRACKER_OVERVIEW) {
