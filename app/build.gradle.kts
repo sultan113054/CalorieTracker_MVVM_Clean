@@ -51,6 +51,7 @@ dependencies {
     implementation(Compose.compiler)
     implementation(Compose.ui)
     implementation(Compose.uiToolingPreview)
+    implementation("androidx.core:core-ktx:+")
     debugImplementation(Compose.uiTool)
     implementation(Compose.hiltNavigationCompose)
     implementation(Compose.material)
@@ -84,8 +85,9 @@ dependencies {
     implementation(Retrofit.moshiConverter)
 
     kapt(Room.roomCompiler)
-    implementation(Room.roomKtx)
     implementation(Room.roomRuntime)
+    annotationProcessor(Room.roomCompiler)
+
 
     testImplementation(Testing.junit4)
     testImplementation(Testing.junitAndroidExt)

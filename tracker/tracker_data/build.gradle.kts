@@ -1,6 +1,10 @@
+
 plugins {
     id("com.android.library")
     id("kotlin-android")
+    id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+
 }
 
 apply {
@@ -13,15 +17,16 @@ android {
     namespace = "com.application.tracker.tracker_data"
 }
 dependencies {
-    "implementation"(project(Modules.core))
-    "implementation"(project(Modules.trackerDomain))
+    implementation(project(Modules.core))
+    implementation(project(Modules.trackerDomain))
 
-    "implementation"(Retrofit.okHttp)
-    "implementation"(Retrofit.retrofit)
-    "implementation"(Retrofit.okHttpLoggingInterceptor)
-    "implementation"(Retrofit.moshiConverter)
+    implementation(Retrofit.okHttp)
+    implementation(Retrofit.retrofit)
+    implementation(Retrofit.okHttpLoggingInterceptor)
+    implementation(Retrofit.moshiConverter)
 
-    "kapt"(Room.roomCompiler)
-    "implementation"(Room.roomKtx)
-    "implementation"(Room.roomRuntime)
+    implementation(Room.roomRuntime)
+    annotationProcessor(Room.roomCompiler)
+    kapt(Room.roomCompiler)
+
 }
