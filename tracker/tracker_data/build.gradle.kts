@@ -26,6 +26,7 @@ dependencies {
     implementation(Retrofit.moshiConverter)
 
     implementation(Room.roomRuntime)
+    implementation(Room.roomCoroutine)
     annotationProcessor(Room.roomCompiler)
     kapt(Room.roomCompiler)
 
